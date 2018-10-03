@@ -1,0 +1,172 @@
+html { 
+    box-sizing: border-box; /*what is included in the width?*/
+  } /* corder-box = border, padding, content*/
+  *, *:before, *:after {
+    box-sizing: inherit; /* makes it compatible with most browsers*/
+  }
+
+html, body { /* two selectors! separated by comma */
+    padding: 0;
+    margin: 0;
+} /* elements stretch all the way to the edges*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-text {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 8px; /* two values: top/bottom left/right*/
+    /* padding-left: 8px;
+    padding-right: 8px; */
+    /* outline: 1px solid rebeccapurple; */
+}
+
+.logo-text
+{  
+    color: rgba(0,0,0, .9); 
+    font-size: 18px; 
+    display: inline-block;
+    /* outline: 1px solid red; */
+    /* padding-right: 50px; */
+    /* background-color: yellow; */
+    margin-right: 20px;
+} /* a in color is how transparent- on a scale from 0 to 1 */
+
+.nav-container {
+    display: inline-block;
+    /* outline: 1px solid blue; */
+}
+
+.nav-link
+{
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    margin-right: 10px;
+}
+.hero-image { /*for any h2 anywhere inside .hero-image */
+    background-image: url(../images/garter.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    min-width: 100%;
+    /* opacity: 0.3; turning up and down the element opacity */
+}
+
+/* descendant selector : h2s within hero-image*/
+.hero-image h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(223, 236, 220, 0.9);
+}
+/* flexbox*/
+.center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me {
+    padding: 0 8px;
+}
+
+/* container determines max size */
+.profile-image {
+    width: 350px;
+    /* another centering technique */
+    margin: 0 auto; /* 0 top and bottom, push equally left and right*/
+}
+
+/* img adapts to container */
+.profile-image img {
+    /* constrain either by width or height, not both
+    so as not to mess up the aspect ratio */
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* 
+response web design implementation
+aka media queries
+if/else statements for your css
+*/
+
+/* 
+start minimal, add on as needed for bigger screens
+
+common "breakpoints" (ish)
+think of s, m, l, xl, hugenormous
+500px
+768px
+1024px
+1200px
+1400px
+*/
+
+@media screen and (min-width: 500px) {
+    
+/* 1. turn the section .about-me section
+into a flex container
+2. set the width of the .about-me-container
+so that it takes up 70% of the width 
+3. set the width of the .profile-image
+so that it looks reasonable
+4. tweak the sizes because it'll look jacked up
+on the first few attempts */
+
+    .about-me {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+/* descendant selector */
+/* .about-me div { */
+    /* these apply to any div anywhere
+    inside of .about-me */
+/* } */
+/* direct child selector 
+only affects the first level
+within about-me*/
+
+    /* .about-me > div {
+        outline: 1px solid rebeccapurple;
+    } */
+
+    .about-me-container {
+        /* box sizing: border -box
+        makes this behave in a sane way
+        without it, the container takes up
+        70% + 18px (not possible math) */
+        width : 70%;
+        padding-right: 18px;
+    }
+
+
+/* .profile-image {
+    /* outline: 5px solid rebeccapurple; */
+    /* width: 200px;  */
+
+    .profile-image {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hero-text h2 {
+    font-size : 48px;
+    }
+    .header-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-text > * { /* * is universal selector; use sparingly, makes browser work hard*/
+        /* outline: 1px solid rebeccapurple; */
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .header-text > nav {
+        display: none;
+    }
+}
