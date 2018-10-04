@@ -16,6 +16,7 @@ body {
 
 .header-text {
     font-family: 'Montserrat', sans-serif;
+    background-color: #4766af;
     padding: 0 8px; /* two values: top/bottom left/right*/
     /* padding-left: 8px;
     padding-right: 8px; */
@@ -24,7 +25,7 @@ body {
 
 .logo-text
 {  
-    color: rgba(0,0,0, .9); 
+    color: #fbab6a; 
     font-size: 18px; 
     display: inline-block;
     /* outline: 1px solid red; */
@@ -40,7 +41,7 @@ body {
 
 .nav-link
 {
-    color: rgba(0,0,0,.5);
+    color: #fbab6a;
     text-decoration: none;
     margin-right: 10px;
 }
@@ -84,6 +85,37 @@ body {
     width: 100%;
     border-radius: 50%;
 }
+
+.contact-links {
+    background-color: #4766af;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-links i {
+    font-size: 30px;
+}
+
+.contact-links .fab,
+.contact-links .fas {
+    color: #fbab6a;
+    padding: 0 8px;
+    margin: 0 8px;
+    transition: font-size .5s
+}
+
+.contact-links a:hover {
+    cursor: pointer;
+}
+
+.contact-links a:hover .fab, /*when the anchor tag is being hovered over*/
+.contact-links a:hover .fas, 
+.contact-links a:active .fab,
+.contact-links a:active .fas { /*styling only the rightmost object*/
+    color: red;
+    font-size: 48px;         
+} 
 
 /* 
 response web design implementation
@@ -160,13 +192,13 @@ within about-me*/
         justify-content: space-between;
         align-items: center;
     }
-    .header-text > * { /* * is universal selector; use sparingly, makes browser work hard*/
-        /* outline: 1px solid rebeccapurple; */
-    }
+    /* .header-text > * { /* * is universal selector; use sparingly, makes browser work hard*/
+        /* outline: 1px solid rebeccapurple;
+    } */
 }
 
-@media screen and (min-width: 700px) {
+/* @media screen and (min-width: 700px) {
     .header-text > nav {
         display: none;
     }
-}
+} */
