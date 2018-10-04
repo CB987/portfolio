@@ -1,3 +1,15 @@
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
 html { 
     box-sizing: border-box; /*what is included in the width?*/
   } /* corder-box = border, padding, content*/
@@ -102,19 +114,25 @@ body {
     color: #fbab6a;
     padding: 0 8px;
     margin: 0 8px;
-    transition: font-size .5s
+    /* transition: transform .5s cubic-bezier(0,.76,.43,.9); */
 }
 
-.contact-links a:hover {
+/* .contact-links a:hover {
     cursor: pointer;
-}
+} */
 
 .contact-links a:hover .fab, /*when the anchor tag is being hovered over*/
 .contact-links a:hover .fas, 
 .contact-links a:active .fab,
 .contact-links a:active .fas { /*styling only the rightmost object*/
-    color: red;
-    font-size: 48px;         
+    color: #ab4d84;
+    /* font-size: 48px;          */
+    /* transform: scale(1.5) */
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    /* animation-timing-function:  */
+    animation-iteration-count: infinite;
 } 
 
 /* 
