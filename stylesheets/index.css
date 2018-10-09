@@ -9,7 +9,9 @@
         transform: scale(1.5);
     }
 }
-
+/* code for the gradient background background: linear-gradient(rgba(156,39,176,0.2), white); */
+/* maybe put in the background boxes for the projects in the carousel?
+or behind the about me text box? */
 html { 
     box-sizing: border-box; /*what is included in the width?*/
   } /* corder-box = border, padding, content*/
@@ -25,6 +27,27 @@ html, body { /* two selectors! separated by comma */
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.slider {
+    /* line them up horizontally */
+    display: flex;
+  
+    /* allow for scrolling */
+    overflow-x: auto;
+  
+    /* make it smooth on iOS */
+    -webkit-overflow-scrolling: touch;
+
+    /* each slide snaps into place */
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slider > div {
+    /* make sure the width is honored */
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+  }
 
 .header-text {
     font-family: 'Montserrat', sans-serif;
@@ -70,7 +93,7 @@ body {
 /* descendant selector : h2s within hero-image*/
 .hero-image h2 {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(223, 236, 220, 0.9);
+    color: #dcd380;
 }
 /* flexbox*/
 .center-center {
@@ -132,7 +155,7 @@ body {
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     /* animation-timing-function:  */
-    animation-iteration-count: infinite;
+    /* animation-iteration-count: infinite; */
 } 
 
 /* 
