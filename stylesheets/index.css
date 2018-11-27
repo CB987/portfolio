@@ -1,3 +1,4 @@
+
 @keyframes zoom {
     0% {
         transform: scale(1);
@@ -19,124 +20,99 @@ html {
     box-sizing: inherit; /* makes it compatible with most browsers*/
   }
 
-html, body { /* two selectors! separated by comma */
+html, body { 
     padding: 0;
     margin: 0;
-} /* elements stretch all the way to the edges*/
+} 
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.slider {
-    /* line them up horizontally */
-    display: flex;
-  
-    /* allow for scrolling */
-    overflow-x: auto;
-  
-    /* make it smooth on iOS */
-    -webkit-overflow-scrolling: touch;
-
-    /* each slide snaps into place */
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-  }
-
-  .slider > div {
-    /* make sure the width is honored */
-    flex-shrink: 0;
-    width: 15%;
-    height: 15%;
-    border: 2px solid #4766af;
-  }
-
-.slider > div > img {
-    height: 100%;
-    width: 100%;
-}
-
+/* HEADER */
 .header-text {
     font-family: 'Montserrat', sans-serif;
     background-color: #4766af;
-    padding: 0 8px; /* two values: top/bottom left/right*/
-    /* padding-left: 8px;
-    padding-right: 8px; */
-    /* outline: 1px solid rebeccapurple; */
+    padding: 0 8px; 
 }
 
-.logo-text
-{  
+.logo-text {  
     color: #fbab6a; 
     font-size: 18px; 
     display: inline-block;
-    /* outline: 1px solid red; */
-    /* padding-right: 50px; */
-    /* background-color: yellow; */
     margin-right: 20px;
-} /* a in color is how transparent- on a scale from 0 to 1 */
+}
 
 .nav-container {
     display: inline-block;
-    /* outline: 1px solid blue; */
 }
 
-.nav-link
-{
+.nav-link {
     color: #fbab6a;
     text-decoration: none;
     margin-right: 10px;
 }
-.hero-image { /*for any h2 anywhere inside .hero-image */
-    
-    /* opacity: 0.3; turning up and down the element opacity */
-}
 
-/* descendant selector : h2s within hero-image*/
-.hero-image h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #dcd380;
-}
-/* flexbox*/
-.center-center {
+/* PROJECTS (IN BODY) */
+.slider { 
+    /* line them up horizontally */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    /* allow for scrolling */
+    /* overflow-x: auto; */
+    /* make it smooth on iOS */
+    /* -webkit-overflow-scrolling: touch; */
+    /* each slide snaps into place */
+    /* scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory; */ 
 }
 
+.slider > div {
+    /* make sure the width is honored */
+    /* flex-shrink: 0; */
+    width: 20%;
+    height: 20%;
+    margin: 2% 10%;
+}
+
+.slider > div > img {
+    border: 2px solid #4766af;
+    height: 100%;
+    width: 100%;
+}
+
+/* ABOUT ME (IN BODY) */
 .about-me {
     padding: 0 8px;
+    display: flex;
 }
 
-/* container determines max size */
 .profile-image {
-    width: 10%;
-    height: 10%;
-    /* another centering technique */
-    margin: 0 auto; /* 0 top and bottom, push equally left and right*/
+    width: 20%;
+    height: 20%; 
+    /* display: inline; */
 }
 
-/* img adapts to container */
 .profile-image img {
-    /* constrain either by width or height, not both
-    so as not to mess up the aspect ratio */
     width: 100%;
     border-radius: 50%;
 }
 
+/* FOOTER INCLUDING CONTACT LINKS */
 footer {
     background-image: url(../images/garter.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 10%;
+    min-height: 50px;
     min-width: 100%;
-    position: fixed;
+    /* position: fixed; */
 }
+
 .contact-links {
     padding: 8px 12px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .contact-links i {
@@ -144,31 +120,27 @@ footer {
 }
 
 .contact-links .fab,
-.contact-links .fas {
+.contact-links .fas,
+.contact-links .far {
     color: #fbab6a;
     padding: 0 8px;
     margin: 0 8px;
     /* transition: transform .5s cubic-bezier(0,.76,.43,.9); */
 }
 
-/* .contact-links a:hover {
-    cursor: pointer;
-} */
-
-.contact-links a:hover .fab, /*when the anchor tag is being hovered over*/
+.contact-links a:hover .fab, 
 .contact-links a:hover .fas, 
+.contact-links a:hover .far,
 .contact-links a:active .fab,
-.contact-links a:active .fas { /*styling only the rightmost object*/
+.contact-links a:active .fas,
+.contact-links a:active .far { 
     color: rebeccapurple;
-    /* font-size: 48px;          */
-    /* transform: scale(1.5) */
     animation-name: zoom;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    /* animation-timing-function:  */
-    /* animation-iteration-count: infinite; */
 } 
 
+/* MEDIA QUERIES */
 /* 
 response web design implementation
 aka media queries
