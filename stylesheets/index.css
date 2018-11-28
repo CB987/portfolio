@@ -23,22 +23,23 @@ html {
 html, body { 
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
 } 
 
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
 /* HEADER */
-.header-text {
-    font-family: 'Montserrat', sans-serif;
+header {
+    height: 10%;
+    width: 100%;
+    top: 0;
     background-color: #4766af;
-    padding: 0 8px; 
 }
 
-.logo-text {  
+header > h1 {  
+    padding: 0 8px; 
+    font-size: 24px;
     color: #fbab6a; 
-    font-size: 18px; 
     display: inline-block;
     margin-right: 20px;
 }
@@ -54,10 +55,11 @@ body {
 }
 
 /* PROJECTS (IN BODY) */
-.slider { 
+.projects { 
     /* line them up horizontally */
     display: flex;
-    width: 80%;
+    width: 100%;
+    height: 150px;
     /* allow for scrolling */
     /* overflow-x: auto; */
     /* make it smooth on iOS */
@@ -65,35 +67,56 @@ body {
     /* each slide snaps into place */
     /* scroll-snap-points-x: repeat(300px);
     scroll-snap-type: mandatory; */ 
+    /* outline: 2px solid red; */
+    justify-content: space-evenly;
+    margin: 2% auto;
 }
 
-.slider > div {
+div.thumbnail {
     /* make sure the width is honored */
     /* flex-shrink: 0; */
-    width: 20%;
-    height: 20%;
-    margin: 2% 10%;
+    width: 120px;
+    height: 120px;
+    /* margin: 2% 5%; */
+    transform: scale(1);
+    /* outline: 2px solid yellow; */
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
 }
 
-.slider > div > img {
+.thumbnail > img {
     border: 2px solid #4766af;
     height: 100%;
     width: 100%;
 }
 
+.caption {
+    text-decoration: none;
+    /* outline: 2px solid blue; */
+    display: block;
+    width: 120px;
+    font-size: 12px;
+}
+
 /* ABOUT ME (IN BODY) */
 .about-me {
-    padding: 0 8px;
     display: flex;
+    margin: 0 2%;
+    /* outline: 2px solid orange; */
 }
 
 .profile-image {
-    width: 20%;
-    height: 20%; 
-    /* display: inline; */
+    width: 120px;
+    height: 120px; 
+    display: block;
+    float: left;
+    /* padding: 3%; */
+    /* outline: 2px solid green; */
 }
 
 .profile-image img {
+    border: 2px solid #4766af;
     width: 100%;
     border-radius: 50%;
 }
@@ -104,8 +127,10 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 50px;
+    min-height: 10%;
     min-width: 100%;
+    bottom: 0;
+    /* outline: 2px solid rebeccapurple */
     /* position: fixed; */
 }
 
