@@ -30,7 +30,7 @@ html, body {
 
 /* HEADER */
 header {
-    height: 10%;
+    height: 5%;
     width: 100%;
     top: 0;
     background-color: #4766af;
@@ -59,7 +59,7 @@ header > h1 {
     /* line them up horizontally */
     display: flex;
     width: 100%;
-    height: 150px;
+    height: 20%;
     /* allow for scrolling */
     /* overflow-x: auto; */
     /* make it smooth on iOS */
@@ -67,19 +67,20 @@ header > h1 {
     /* each slide snaps into place */
     /* scroll-snap-points-x: repeat(300px);
     scroll-snap-type: mandatory; */ 
-    /* outline: 2px solid red; */
+    outline: 2px solid red;
     justify-content: space-evenly;
     margin: 2% auto;
+    padding: 0 auto;
 }
 
 div.thumbnail {
     /* make sure the width is honored */
     /* flex-shrink: 0; */
-    width: 120px;
-    height: 120px;
+    width: 23%;
+    height: 90%;
     /* margin: 2% 5%; */
     transform: scale(1);
-    /* outline: 2px solid yellow; */
+    outline: 2px solid yellow;
     vertical-align: top;
     display: inline-block;
     text-align: center;
@@ -93,17 +94,18 @@ div.thumbnail {
 
 .caption {
     text-decoration: none;
-    /* outline: 2px solid blue; */
+    outline: 2px solid blue;
     display: block;
-    width: 120px;
+    width: 100%;
     font-size: 12px;
 }
 
 /* ABOUT ME (IN BODY) */
-.about-me {
-    display: flex;
+.about-me-container {
+    /* display: flex; */
     margin: 0 2%;
-    /* outline: 2px solid orange; */
+    width: 96%;
+    outline: 2px solid orange;
 }
 
 .profile-image {
@@ -112,7 +114,7 @@ div.thumbnail {
     display: block;
     float: left;
     /* padding: 3%; */
-    /* outline: 2px solid green; */
+    outline: 2px solid green;
 }
 
 .profile-image img {
@@ -121,13 +123,18 @@ div.thumbnail {
     border-radius: 50%;
 }
 
+.technologies {
+    display: flex;
+    outline: 2px solid rebeccapurple;
+}
+
 /* FOOTER INCLUDING CONTACT LINKS */
 footer {
     background-image: url(../images/garter.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 10%;
+    min-height: 5%;
     min-width: 100%;
     bottom: 0;
     /* outline: 2px solid rebeccapurple */
@@ -159,7 +166,7 @@ footer {
 .contact-links a:active .fab,
 .contact-links a:active .fas,
 .contact-links a:active .far { 
-    color: rebeccapurple;
+    color: #4766af;
     animation-name: zoom;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -184,7 +191,7 @@ think of s, m, l, xl, hugenormous
 1400px
 */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
     
 /* 1. turn the section .about-me section
 into a flex container
@@ -195,10 +202,10 @@ so that it looks reasonable
 4. tweak the sizes because it'll look jacked up
 on the first few attempts */
 
-    .about-me {
+    /* .about-me {
         display: flex;
         flex-direction: row-reverse;
-    }
+    } */
 
 /* descendant selector */
 /* .about-me div { */
@@ -213,34 +220,34 @@ within about-me*/
         outline: 1px solid rebeccapurple;
     } */
 
-    .about-me-container {
+    /* .about-me-container { */
         /* box sizing: border -box
         makes this behave in a sane way
         without it, the container takes up
         70% + 18px (not possible math) */
-        width : 70%;
+        /* width : 70%;
         padding-right: 18px;
-    }
+    } */
 
 
 /* .profile-image {
     /* outline: 5px solid rebeccapurple; */
     /* width: 200px;  */
 
-    .profile-image {
+    /* .profile-image {
         width: 30%;
-    }
+    } */
 }
 
 @media screen and (min-width: 700px) {
-    .hero-text h2 {
+    /* .hero-text h2 {
     font-size : 48px;
     }
     .header-text {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+    } */
     /* .header-text > * { /* * is universal selector; use sparingly, makes browser work hard*/
         /* outline: 1px solid rebeccapurple;
     } */
