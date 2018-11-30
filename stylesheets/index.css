@@ -1,249 +1,110 @@
-
-@keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(2.5);
-    }
-    100% {
-        transform: scale(1.5);
-    }
+html {
+    box-sizing: border-box;
 }
-/* code for the gradient background background: linear-gradient(rgba(156,39,176,0.2), white); */
-/* maybe put in the background boxes for the projects in the carousel?
-or behind the about me text box? */
-html { 
-    box-sizing: border-box; /*what is included in the width?*/
-  } /* corder-box = border, padding, content*/
-  *, *:before, *:after {
-    box-sizing: inherit; /* makes it compatible with most browsers*/
-  }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
-html, body { 
-    padding: 0;
+html, body {
     margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    /* background-image: url("images/garter.jpg"); */
-} 
+    font-family: 'Quicksand', sans-serif;
+}
 
-/* HEADER */
+/*==============
+==HEADER
+===============*/
 header {
-    height: 10%;
-    width: 100%;
-    top: 0;
-    background-color: #4766af;
-}
-
-header > h1 {  
-    padding: 0 8px; 
-    font-size: 24px;
-    color: #fbab6a; 
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.nav-container {
-    display: inline-block;
-}
-
-.nav-link {
-    color: #fbab6a;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-/* PROJECTS (IN BODY) */
-.project-container { 
+    width:100%;
+    /* height: 10%; */
+    color: darkblue;
     /* display: flex; */
-    width: 96%;
-    height: 150px;
-    /* outline: 2px solid red; */
-    /* justify-content: space-evenly; */
-    margin: 2% auto;
-    font-size: 13px;
-    /* padding: 0 auto; */
+    border: 2px solid red;
+    /* justify-content: space-between;
+    align-items: center; */
+    /* background-image: url("/images/garter.jpg"); */
 }
 
-.project-container a {
+.title {
+    /* margin-top: 2%; */
+    /* border: 2px solid yellow; */
+    font-size: 36px;
+    text-align: center;
+    margin-top: 18%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-container  a {
     text-decoration: none;
+    float: right;
+    margin-top: 3%;
+    border: 2px solid orange;
 }
 
-.project-image {
-    background-color: rgba(255,255,255,0.9);
-    width: 150px;
-    height: 150px;
-    display: block;
-    float: left;
-    margin-right: 5px;
-    /* outline: 2px solid yellow; */
+.hero-image {
+background-image: url("../images/sky.jpg");
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+min-height: 40%;
+min-width: 100%;
 }
 
-.project-image img {
-    /* border: 2px solid #4766af; */
-    height: 100%;
-    width: 100%;
-}
-
-/* ABOUT ME (IN BODY) */
+/*==============
+==ABOUT ME
+===============*/
 .about-me-container {
-    /* display: flex; */
-    margin: 0 2%;
     width: 96%;
-    /* outline: 2px solid orange; */
+    margin: 2%;
+    color: darkblue;
+    text-decoration: none;
+    /* border: 2px solid purple; */
     font-size: 13px;
-}
-
-.profile-image {
-    width: 150px;
-    height: 150px; 
-    display: block;
-    float: left;
-    margin-right: 5px;
-    /* padding: 3%; */
-    /* outline: 2px solid green; */
 }
 
 .profile-image img {
-    border: 2px solid #4766af;
-    width: 100%;
     border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 2%;
+    /* border: 2px solid blue; */
+    shape-outside: circle();
 }
 
 .technologies {
     display: flex;
-    /* outline: 2px solid rebeccapurple; */
+}
+/*===============
+==PROJECTS
+================*/
+.project-container {
+    width: 96%;
+    height: 150px;
+    margin: 2%;
+    color: darkblue;
+    text-decoration: none;
+    font-size: 13px;
 }
 
-/* FOOTER INCLUDING CONTACT LINKS */
+.project-image {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 3%;
+}
+
+.project-image img {
+    width:100%;
+    height:100%;
+}
+
+/*=============
+==FOOTER
+==============*/
 footer {
-    background-image: url(../images/garter.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 10%;
-    min-width: 100%;
-    bottom: 0;
-    /* outline: 2px solid rebeccapurple */
-    /* position: fixed; */
+    width: 100%;
+    height: 7.5%;
 }
-
-.contact-links {
-    padding: 8px 12px;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-links i {
-    font-size: 30px;
-}
-
-.contact-links .fab,
-.contact-links .fas,
-.contact-links .far {
-    color: #fbab6a;
-    padding: 0 8px;
-    margin: 0 8px;
-    /* transition: transform .5s cubic-bezier(0,.76,.43,.9); */
-}
-
-.contact-links a:hover .fab, 
-.contact-links a:hover .fas, 
-.contact-links a:hover .far,
-.contact-links a:active .fab,
-.contact-links a:active .fas,
-.contact-links a:active .far { 
-    color: #4766af;
-    animation-name: zoom;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-} 
-
-/* MEDIA QUERIES */
-/* 
-response web design implementation
-aka media queries
-if/else statements for your css
-*/
-
-/* 
-start minimal, add on as needed for bigger screens
-
-common "breakpoints" (ish)
-think of s, m, l, xl, hugenormous
-500px
-768px
-1024px
-1200px
-1400px
-*/
-
-@media screen and (min-width: 550px) {
-    
-/* 1. turn the section .about-me section
-into a flex container
-2. set the width of the .about-me-container
-so that it takes up 70% of the width 
-3. set the width of the .profile-image
-so that it looks reasonable
-4. tweak the sizes because it'll look jacked up
-on the first few attempts */
-
-    /* .about-me {
-        display: flex;
-        flex-direction: row-reverse;
-    } */
-
-/* descendant selector */
-/* .about-me div { */
-    /* these apply to any div anywhere
-    inside of .about-me */
-/* } */
-/* direct child selector 
-only affects the first level
-within about-me*/
-
-    /* .about-me > div {
-        outline: 1px solid rebeccapurple;
-    } */
-
-    /* .about-me-container { */
-        /* box sizing: border -box
-        makes this behave in a sane way
-        without it, the container takes up
-        70% + 18px (not possible math) */
-        /* width : 70%;
-        padding-right: 18px;
-    } */
-
-
-/* .profile-image {
-    /* outline: 5px solid rebeccapurple; */
-    /* width: 200px;  */
-
-    /* .profile-image {
-        width: 30%;
-    } */
-}
-
-@media screen and (min-width: 700px) {
-    /* .hero-text h2 {
-    font-size : 48px;
-    }
-    .header-text {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
-    /* .header-text > * { /* * is universal selector; use sparingly, makes browser work hard*/
-        /* outline: 1px solid rebeccapurple;
-    } */
-}
-
-/* @media screen and (min-width: 700px) {
-    .header-text > nav {
-        display: none;
-    }
-} */
