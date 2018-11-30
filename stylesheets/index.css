@@ -79,8 +79,12 @@ min-width: 100%;
     width: 96%;
     margin: 2%;
     color: darkblue;
-    text-decoration: none;
     font-size: 14px;
+}
+
+.about-me-container a {
+    text-decoration: none;
+
 }
 
 .profile-image img {
@@ -112,6 +116,7 @@ min-width: 100%;
     text-align: center;
     font-size: 12px;
 }
+
 /*===============
 ==PROJECTS
 ================*/
@@ -142,7 +147,7 @@ min-width: 100%;
     margin-top: 0;
 }
 
-.project-container p {
+.project-container a {
     margin-top: 1%;
     text-decoration: none;
 }
