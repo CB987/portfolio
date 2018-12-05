@@ -40,18 +40,13 @@ header {
     width:100%;
     color: darkblue;
     border:2px solid rgba(0,0,0,0);
-    /* display: flex; */
 }
 
-.nav-container {
-    /* position: fixed; */
-}
 .nav-container  a {
     margin-top: 3%;
     float: right;
     text-decoration: none;
     padding: 1%;
-    /* position: sticky; */
     /* border: 2px solid orange; */
 }
 
