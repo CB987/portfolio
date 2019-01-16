@@ -161,7 +161,9 @@ footer {
 }
 
 .contact-links {
-    background-color: darkblue;
+    background-image: url("../images/knitfooter.jpg");
+    background-size: cover;
+    /* background-color: darkblue; */
     padding: 10px 12px;
     display: flex;
     justify-content: flex-end;
