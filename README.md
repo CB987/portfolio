@@ -2,7 +2,7 @@
 <h1>Fullstack Web Developer</h1>
 
 <h4>Portfolio: Hire Me!</h4>
-<p> I am a student in a 16-week Immersive Fullstack Web Development Bootcamp, DigitalCrafts (projected graduation January 17, 2019-- so close!). It has been intense and I have learned so much. Like so many things in life, the most rewarding and enjoyable can also be the most challenging at times. Overcoming the challenges equal parts makes it worth doing and makes it enjoyable. My featured projects are some that I have built as class projects and some that I have worked on on my own. </p>
+<p> I wrapped up a 16-week Immersive Fullstack Web Development Bootcamp, DigitalCrafts in January, 2019. It was an intense few months and I have learned so much. Like so many things in life, the most rewarding and enjoyable can also be the most challenging at times. Overcoming the challenges equal parts makes it worth doing and makes it enjoyable. Now, I am raring to go and apply what I have learned! My featured projects are some that I have built as class projects and some that I have worked on on my own. </p>
 
 <h4>Built Using:</h4>
   <ul>
