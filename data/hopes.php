@@ -20,8 +20,12 @@ header('Content-Type: text/html; charset=UTF-8');
 $name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : 'Guest';
 
 // Build the HTML response
-
+echo "<html>";
+echo "<head><title>API Response</title></head>";
+echo "<body>";
+echo "<h1>Hello, " . $name . "!</h1>";
 // echo "<p>To the rational mind nothing is inexplicable, only unexplained.</p>";
 echo "<p>Is it the cacheing?/p>";
-
+echo "</body>";
+echo "</html>";
 ?>
