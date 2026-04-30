@@ -24,7 +24,8 @@ echo "<html>";
 echo "<head><title>API Response</title></head>";
 echo "<body>";
 echo "<h1>Hello, " . $name . "!</h1>";
-echo "<p>To the rational mind nothing is inexplicable, only unexplained.</p>";
+// echo "<p>To the rational mind nothing is inexplicable, only unexplained.</p>";
+// echo "<p>To the rational mind nothing is inexplicable, only unexplained.</p>";
 echo "</body>";
 echo "</html>";
 ?>
